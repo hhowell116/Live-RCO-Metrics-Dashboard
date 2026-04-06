@@ -6,10 +6,58 @@
 <title>RCO Metrics Dashboard</title>
 
 <link rel="stylesheet" href="css/main.css">
+<style>
+  .nav-btn-admin {
+    background: #2e7d32 !important;
+    color: white !important;
+    border-color: #1b5e20 !important;
+  }
+  .nav-btn-admin:hover {
+    background: #1b5e20 !important;
+  }
+  .nav-btn-admin.active {
+    background: #1b5e20 !important;
+    border-color: #1b5e20 !important;
+  }
+  .demo-topbar {
+    background: #5f4b3c;
+    color: #f5f1ec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+  }
+  .demo-topbar .demo-label {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .demo-topbar .demo-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .demo-topbar .demo-role {
+    background: #2e7d32;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+</style>
 </head>
 
 <body>
-<div style="background:#5f4b3c;color:#f5f1ec;text-align:center;padding:6px 0;font-size:0.82em;letter-spacing:0.5px;font-family:'Inter',sans-serif;">IT Admin View &mdash; Demo Mode</div>
+<div class="demo-topbar">
+  <span class="demo-label">IT Admin View &mdash; Demo Mode</span>
+  <div class="demo-user">
+    <span>demo@rowecasaorganics.com</span>
+    <span class="demo-role">IT Admin</span>
+  </div>
+</div>
 <div class="app-shell">
 
   <aside class="sidebar">
@@ -34,7 +82,6 @@
       <button class="nav-btn" data-tab="unfulfilled">Unfulfilled Orders</button>
       <button class="nav-btn" data-tab="fulfillment-dashboard">Fulfillment</button>
       <button class="nav-btn" data-tab="skip-the-line">Skip the Line</button>
-      <button class="nav-btn" data-tab="admin">Admin Panel</button>
     </div>
 
     <div class="sidebar-footer">
@@ -46,6 +93,7 @@
       </div>
 
       <div class="sidebar-separator"></div>
+      <button class="nav-btn nav-btn-admin" data-tab="admin" id="adminBtn">Admin Panel</button>
       <div class="sidebar-separator"></div>
 
       <div class="footer-mini-row">
