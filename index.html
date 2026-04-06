@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div style="background:#5f4b3c;color:#f5f1ec;text-align:center;padding:6px 0;font-size:0.82em;letter-spacing:0.5px;font-family:'Inter',sans-serif;">Demo Mode &mdash; Static Preview</div>
+<div style="background:#5f4b3c;color:#f5f1ec;text-align:center;padding:6px 0;font-size:0.82em;letter-spacing:0.5px;font-family:'Inter',sans-serif;">IT Admin View &mdash; Demo Mode &mdash; Role-based access controls restrict dashboards and revenue visibility by role in production</div>
 <div class="app-shell">
 
   <aside class="sidebar">
@@ -34,6 +34,7 @@
       <button class="nav-btn" data-tab="unfulfilled">Unfulfilled Orders</button>
       <button class="nav-btn" data-tab="fulfillment-dashboard">Fulfillment</button>
       <button class="nav-btn" data-tab="skip-the-line">Skip the Line</button>
+      <button class="nav-btn" data-tab="admin">Admin Panel</button>
     </div>
 
     <div class="sidebar-footer">
@@ -45,7 +46,6 @@
       </div>
 
       <div class="sidebar-separator"></div>
-      <!-- Admin Panel removed for demo -->
       <div class="sidebar-separator"></div>
 
       <div class="footer-mini-row">
@@ -105,7 +105,9 @@
     <div id="skip-the-line-frame" class="iframe-wrapper">
       <iframe src="html/skip-the-line.html"></iframe>
     </div>
-    <!-- Admin frame removed for demo -->
+    <div id="admin-frame" class="iframe-wrapper">
+      <iframe src="html/admin.html"></iframe>
+    </div>
   </main>
 
 </div>
