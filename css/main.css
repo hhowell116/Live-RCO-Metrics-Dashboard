@@ -507,7 +507,7 @@ body {
 
 .app-shell {
   display: flex;
-  height: calc(100vh - 28px);
+  height: calc(100vh - 32px);
 }
 
 .content-area {
@@ -535,7 +535,7 @@ iframe {
 .sidebar {
   width: 170px;
   min-width: 170px;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   background: linear-gradient(180deg, var(--sb-bg1) 0%, var(--sb-bg2) 100%);

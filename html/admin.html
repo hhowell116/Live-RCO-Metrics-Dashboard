@@ -6,6 +6,10 @@
 <title>Admin Panel - RCO</title>
 <link rel="stylesheet" href="../css/main.css">
 <script src="../js/roles.js"></script>
+<style>
+  html, body { height: 100%; overflow: auto !important; }
+  .admin-container { padding-bottom: 40px; }
+</style>
 </head>
 <body class="page-admin">
 <div class="admin-container">
@@ -24,7 +28,7 @@
       <div class="admin-user-card">
         <div class="admin-user-row">
           <span class="admin-user-label">Logged in as</span>
-          <span class="admin-user-value" id="currentUser">demo@rowecasaorganics.com</span>
+          <span class="admin-user-value" id="currentUser">test.admin@rowecasaorganics.com</span>
         </div>
         <div class="admin-user-row">
           <span class="admin-user-label">Role</span>
@@ -174,12 +178,11 @@ document.getElementById('adminMeta').textContent = new Date().toLocaleString('en
 
 // Static access log
 const accessLogData = [
-  { email: 'demo@rowecasaorganics.com', role: 'IT Admin', time: new Date().toISOString() },
-  { email: 'michael@rowecasaorganics.com', role: 'C-Suite', time: new Date(Date.now() - 1800000).toISOString() },
-  { email: 'jennifer.stewart@rowecasaorganics.com', role: 'Supervisor', time: new Date(Date.now() - 7200000).toISOString() },
-  { email: 'andrew.neidley@rowecasaorganics.com', role: 'IT Admin', time: new Date(Date.now() - 14400000).toISOString() },
-  { email: 'sarah.martinez@rowecasaorganics.com', role: 'Director', time: new Date(Date.now() - 28800000).toISOString() },
-  { email: 'philip@rowecasaorganics.com', role: 'C-Suite', time: new Date(Date.now() - 43200000).toISOString() },
+  { email: 'test.admin@rowecasaorganics.com', role: 'IT Admin', time: new Date().toISOString() },
+  { email: 'test.exec@rowecasaorganics.com', role: 'C-Suite', time: new Date(Date.now() - 1800000).toISOString() },
+  { email: 'test.director@rowecasaorganics.com', role: 'Director', time: new Date(Date.now() - 7200000).toISOString() },
+  { email: 'test.supervisor@rowecasaorganics.com', role: 'Supervisor', time: new Date(Date.now() - 14400000).toISOString() },
+  { email: 'test.employee@rowecasaorganics.com', role: 'Employee', time: new Date(Date.now() - 28800000).toISOString() },
 ];
 
 const logBody = document.getElementById('accessLog');
@@ -193,8 +196,7 @@ logBody.innerHTML = accessLogData.map(entry => `
 
 // Static currently accessing
 const currentUsers = [
-  { email: 'demo@rowecasaorganics.com', role: 'IT Admin', since: new Date().toISOString() },
-  { email: 'michael@rowecasaorganics.com', role: 'C-Suite', since: new Date(Date.now() - 600000).toISOString() },
+  { email: 'test.admin@rowecasaorganics.com', role: 'IT Admin', since: new Date().toISOString() },
 ];
 
 const caBody = document.getElementById('currentlyAccessing');
@@ -246,11 +248,11 @@ document.querySelectorAll('.perm-checkbox').forEach(cb => {
 
 // Build user directory with demo users
 const demoUsers = {
-  'IT Admin': ['demo@rowecasaorganics.com', 'andrew.neidley@rowecasaorganics.com'],
-  'C-Suite': ['michael@rowecasaorganics.com', 'philip@rowecasaorganics.com'],
-  'Director': ['sarah.martinez@rowecasaorganics.com', 'david.chen@rowecasaorganics.com'],
-  'Supervisor': ['jennifer.stewart@rowecasaorganics.com', 'marcus.williams@rowecasaorganics.com', 'rachel.gomez@rowecasaorganics.com'],
-  'Employee': ['alex.thompson@rowecasaorganics.com', 'emily.rodriguez@rowecasaorganics.com', 'jake.morrison@rowecasaorganics.com', 'nina.patel@rowecasaorganics.com'],
+  'IT Admin': ['test.admin@rowecasaorganics.com', 'test.admin2@rowecasaorganics.com'],
+  'C-Suite': ['test.exec@rowecasaorganics.com', 'test.exec2@rowecasaorganics.com'],
+  'Director': ['test.director@rowecasaorganics.com', 'test.director2@rowecasaorganics.com'],
+  'Supervisor': ['test.supervisor@rowecasaorganics.com', 'test.supervisor2@rowecasaorganics.com', 'test.supervisor3@rowecasaorganics.com'],
+  'Employee': ['test.employee@rowecasaorganics.com', 'test.employee2@rowecasaorganics.com', 'test.employee3@rowecasaorganics.com', 'test.employee4@rowecasaorganics.com'],
 };
 
 const dirBody = document.getElementById('userDirectory');
